@@ -3,33 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Method</title>
+    <title>Array Methods Example</title>
+    <link rel="stylesheet" href="array.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <h1>Array Methods Example</h1>
 
+    <button onclick="showArrayLength()">Show Array Length</button>
+    <div id="arrayLengthOutput" class="output"></div>
 
-        </nav>
-    </header>
+    <button onclick="showArrayToString()">Show Array toString()</button>
+    <div id="arrayToStringOutput" class="output"></div>
 
-    <section>
-        <div class="content">
-            <a id="myLink" href="https://www.youtube.com">YOUTUBE</a>
-            <br>
-            <button id="changeButton" onclick="changelink()">click</button>
-            <h3 class="class1"> </h3>
-            <h3 class="class2"> </h3>
-            <h3 class="class3"> </h3>
+    <button onclick="showArrayPop()">Show Array pop()</button>
+    <div id="arrayPopOutput" class="output"></div>
 
-            <h4></h4>
-            <h5></h5>
-            <h6></h6>
-
-            <p class="querselect"></p>
-        </div>
-    </section>
-
-    <script src="index.js"></script>
+    <script>
+        function showArrayLength() {
+            const myArray = [1, 2, 3, 4, 5];
+            const outputDiv = document.getElementById('arrayLengthOutput');
+            outputDiv.classList.add('effect');
+            outputDiv.style.animation = 'fadeIn 1s forwards';
+            outputDiv.innerText = `Array length: ${myArray.length}`;
+        }
+        
+        function showArrayToString() {
+            const myArray = [1, 2, 3, 4, 5];
+            const outputDiv = document.getElementById('arrayToStringOutput');
+            outputDiv.classList.add('effect');
+            outputDiv.style.animation = 'fadeIn 1s forwards';
+            outputDiv.innerText = `Array as string: ${myArray.toString()}`;
+        }
+        
+        function showArrayPop() {
+            const myArray = [1, 2, 3, 4, 5];
+            const outputDiv = document.getElementById('arrayPopOutput');
+            outputDiv.classList.add('effect');
+            outputDiv.style.animation = 'fadeIn 1s forwards';
+            const poppedElement = myArray.pop();
+            outputDiv.innerText = `Popped element: ${poppedElement}, New array: ${myArray}`;
+        }
+               
+    </script>
 </body>
 </html>
