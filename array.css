@@ -1,0 +1,68 @@
+body {
+    background: linear-gradient(to right, black, grey, white);
+}
+h1 {
+    color: white;
+}
+
+.output {
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    height: 30px;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s; 
+    animation: pulse 1.5s infinite alternate; 
+}
+
+button:hover {
+    box-shadow: 0 0 20px 7px white; 
+    background-color: white;
+    color: black;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+
+
+
